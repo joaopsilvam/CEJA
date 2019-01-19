@@ -1,5 +1,8 @@
 package br.com.ceja.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.ImageIcon;
 
 public class Aluno {
@@ -7,13 +10,13 @@ public class Aluno {
 	private ImageIcon foto;
 	private DadosPessoais dados;
 	private Boletim boletim;
-	private Historico historico;
+	private List<Disciplina> historico;
 	
 	public Aluno() {
-		this(new ImageIcon(), new DadosPessoais(), new Boletim(), new Historico());
+		this(new ImageIcon(), new DadosPessoais(), new Boletim(), new ArrayList<Disciplina>());
 	}
 	
-	public Aluno(ImageIcon foto, DadosPessoais dados, Boletim boletim, Historico historico) {
+	public Aluno(ImageIcon foto, DadosPessoais dados, Boletim boletim, List<Disciplina> historico) {
 		this.foto = foto;
 		this.dados = dados;
 		this.boletim = boletim;
@@ -44,11 +47,11 @@ public class Aluno {
 		this.boletim = boletim;
 	}
 
-	public Historico getHistorico() {
+	public List<Disciplina> getHistorico() {
 		return historico;
 	}
 
-	public void setHistorico(Historico historico) {
+	public void setHistorico(List<Disciplina> historico) {
 		this.historico = historico;
 	}	
 }

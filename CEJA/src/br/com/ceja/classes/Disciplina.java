@@ -5,17 +5,15 @@ import java.util.List;
 
 public class Disciplina {
 
-	private String nome, turma;
+	private String nome;
 	private List<Integer> notas;
-	int mediaFinal;
 	
 	public Disciplina() {
-		this("", "", new ArrayList<Integer>());
+		this("", new ArrayList<Integer>());
 	}
 	
-	public Disciplina(String nome, String turma, List<Integer> notas) {
+	public Disciplina(String nome, List<Integer> notas) {
 		this.nome = nome;
-		this.turma = turma;
 		this.notas = notas;
 	}
 
@@ -25,14 +23,6 @@ public class Disciplina {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getTurma() {
-		return turma;
-	}
-
-	public void setTurma(String turma) {
-		this.turma = turma;
 	}
 
 	public List<Integer> getNotas() {
